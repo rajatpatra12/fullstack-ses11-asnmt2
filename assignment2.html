@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home page</title>
+</head>
+<body id="body">
+    <table id="dynamic-table" border="1">
+        
+    </table>
+    <br>
+    <input type="button" value="Add row" onclick="addRow()">
+	<script type="text/javascript">
+		function addRow(){
+        var table = document.getElementById("dynamic-table");//getting the table
+        var i=table.rows.length;
+        var row = table.insertRow(i);//setting the row
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);//setting the cell
+        cell1.innerHTML = "Cell"+((i*2)+1);
+        cell2.innerHTML = "Cell"+((i*2)+2);
+
+        }
+	</script>
+</body>
+</html>
